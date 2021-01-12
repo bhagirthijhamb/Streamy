@@ -1,0 +1,31 @@
+{
+  "streams": [
+    {
+      "title": "abc",
+      "description": "xyz",
+      "id": 1
+    },
+    {
+      "title": "asda",
+      "description": "dfd",
+      "id": 7
+    },
+    {
+      "title": "Patch request",
+      "description": "It works ?",
+      "userId": "116037870104199790534",
+      "id": 8
+    },
+    {
+      "title": "hi",
+      "description": "hello",
+      "id": 9
+    },
+    {
+      "title": "programmatic navigaion",
+      "description": "hello",
+      "userId": "116037870104199790534",
+      "id": 10
+    }
+  ]
+}
