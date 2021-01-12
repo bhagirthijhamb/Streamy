@@ -12,6 +12,7 @@ class StreamForm extends React.Component {
       )
     }
   }
+
   // renderInput(formProps){
   renderInput = ({ input, label, meta }) => {
     // console.log(meta);
@@ -31,11 +32,11 @@ class StreamForm extends React.Component {
     )
   }
   onSubmit = (formValues) => {
-    // console.log(formValues);
+    console.log(formValues);
     this.props.onSubmit(formValues);
   }
   render (){
-    // console.log(this.props);
+    console.log(this.props);
       return (
         <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="ui form error">
           <Field name="title" component={this.renderInput} label="Enter Title" />
@@ -66,3 +67,5 @@ export default reduxForm({
   form: 'streamForm',
   validate: validate
 })(StreamForm);
+// reduxForm() returns a function and we call it with StreamForm
+// reduxForm() takes an object as argument
