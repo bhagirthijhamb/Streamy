@@ -17,6 +17,8 @@ export const signOut = () => {
 
 export const createStream = (formValues) => {
   return async (dispatch, getState) => {
+    // when we return a function from a action creator, the returned function gets called automatically by redux-thunk with two arguments - dispatch, getState function
+    // getState function allows us to reach out into the redux store and pull out some piece of information
     const { userId } = getState().auth;
     // const response = await streams.post('/streams', formValues);
     const response = await streams.post('/streams', { ... formValues, userId });
@@ -35,7 +37,9 @@ export const fetchStream = (id) => async dispatch => {
   dispatch({ type: FETCH_STREAM, payload: response.data })
 }
 export const editStream = (id, formValues) => async dispatch => {
+  // Update ALL properties of a record - PUT
   // const response = await streams.put(`/streams/${id}`, formValues)
+  // Update SOME properties of a record - PATCH
   const response = await streams.patch(`/streams/${id}`, formValues)
   dispatch ({ type: EDIT_STREAM, payload: response.data })
   history.push('/');

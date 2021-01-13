@@ -31,6 +31,7 @@ class StreamForm extends React.Component {
       </div>
     )
   }
+  // onSubmit is called with whatever values are coming out from our form
   onSubmit = (formValues) => {
     console.log(formValues);
     this.props.onSubmit(formValues);
@@ -67,5 +68,6 @@ export default reduxForm({
   form: 'streamForm',
   validate: validate
 })(StreamForm);
+
 // reduxForm() returns a function and we call it with StreamForm
 // reduxForm() takes an object as argument

@@ -5,7 +5,8 @@ import { fetchStream, editStream } from './../../actions';
 import StreamForm from './StreamForm';
 
 class StreamEdit extends React.Component {
-  // console.log(props)
+
+  // With React-Router, each component needs to be designed to work in isolation (fetch its own data!)
   componentDidMount(){
     this.props.fetchStream(this.props.match.params.id);
   }

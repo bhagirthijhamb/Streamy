@@ -16,7 +16,7 @@ class GoogleAuth extends React.Component {
       }).then(() => {
         // this.auth instance can be used to sign the user in or get the users current authentcation status
         this.auth = window.gapi.auth2.getAuthInstance();
-        // we want to find out if the uaer is signed in and print our the authentication status on the screen
+        // we want to find out if the user is signed in and print our the authentication status on the screen
         // but when this componentDidMount() gets called, the component has already been rendered to the screen
         // now if we want to update what content this component shows, we need to somehow get the component to rerender
         // So we make use of component level state here
@@ -40,10 +40,10 @@ class GoogleAuth extends React.Component {
       })
     })
   }
-  // Arrow functions because these are calback functions
+  // Arrow functions because these are callback functions
   // called anytime the users authentication status changes according to GAPI
   // onAuthChange = () => {
-  onAuthChange = (isSignedIn) => { // when called frpm inside .listen(), it gets called with Boolean true/false (recieve as an argument)
+  onAuthChange = (isSignedIn) => { // when called from inside .listen(), it gets called with Boolean true/false (so recieve as an argument)
     // getting the value of isSignedIn from this.auth.isSignedIn.get()
     // this.setState({ isSignedIn: this.auth.isSignedIn.get() }); // not required to reach to auth instance
 
